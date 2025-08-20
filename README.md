@@ -71,4 +71,18 @@ Assume that you are already working here, and you are given full responsibilty o
 
 If you feel that you can enhance this project with any additional filters, better UI elements, or something different altogether! Feel free to run wild.
 
+# Submission Guide
+
+You will have a 48 hour window from when you start.
+
+Once you've cloned and made all the required changes in the project, push it on a public repository and share the link.
+
+## Deliverables
+
+1. README.md with setup/run instructions. Include .env.example and a seed step (if any) if you've changed db schema.
+
+2. AI_USAGE.md that lists where you used AI/coding assistants, prompts you asked for substantive code, and how you verified/modified results. We understand you will use AI, and we encourage it by giving ChatGPT subscriptions to all employees, so by this, we also want to understand how you structure your GPT prompts.
+
+3. A 5–10 minute video walkthrough showing the feature working and explaining your approach, a couple of decisions, and at least one place where you changed direction after discovery.
+
 Good luck, have fun.
