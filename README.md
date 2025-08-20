@@ -1,4 +1,4 @@
-# 🏠 What is the weather?
+# 🏠 Weather to Stay or Not
 
 Welcome! This is an evaluation project for Warden.
 
@@ -8,7 +8,7 @@ In the file `.env.example` you are given readonly credentials of a live hosted d
 
 ## Objectives
 
-You are given full ownership and responsibility for this endpoint.Your task is to build a **search page in Next.js** that consumes this API and provides users with both search and filtering capabilities. **Specific Requirement is given below.**
+Your task is to build a single **search page in Next.js** that consumes this API to return accurate results and provides users with both search and filtering capabilities. **Specific Requirement is given below.**
 
 The focus here is **functionality rather than design**. This means the main priority is on backend query optimization (efficiently handling multiple filters, scaling to larger datasets, and returning results quickly) and smooth frontend integration (accurate wiring between filters, search, and API responses). The UI itself can remain minimal: a simple search bar, intuitive filtering inputs, and property cards showing relevant information are more than enough.
 
@@ -35,8 +35,6 @@ After a 6 hour meeting, following filters and constraints were finalized.
 
 2. You only have **readonly access** to the provided database. If you wish to create migrations or modify the schema, please follow the [migration guide](docs/migrations.md).
 
-3. Treat this like it is a real project, feel free to polish the API or add more functionality to the search page.
-
 ## Installation
 
 1. Clone this repository and move into the folder:
@@ -58,3 +56,19 @@ After a 6 hour meeting, following filters and constraints were finalized.
    npm run dev
    ```
    open `http://localhost:5000` you should see "Warden Weather Test: OK"
+
+## Technical Expectations
+
+1. Use strict types as much as possible.
+
+2. Keep the code modular, resource efficient and fast!
+
+3. Keep a good commit history, with small meaningful commits
+
+## Quality Expectations
+
+Assume that you are already working here, and you are given full responsibilty ownership of this endpoint. Treat this codebase as production!
+
+If you feel that you can enhance this project with any additional filters, better UI elements, or something different altogether! Feel free to run wild.
+
+Good luck, have fun.
