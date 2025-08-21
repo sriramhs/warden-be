@@ -20,14 +20,13 @@ Our Product team has identified that weather is a critical factor when people ch
 
 After a 6 hour meeting, following filters and constraints were finalized.
 
-- **Temperature Range (°C)** → Numeric range input (min and max) [-20°C to 50°C].
-- **Humidity Range (%)** → Numeric range input (min and max) [0% to 100%].
-- **Weather Condition** → Dropdown with the following **5 grouped options**, mapped to WMO (World Meteorological Organization) weather codes:
-  - **Clear** → 0 (clear sky)
-  - **Cloudy** → 1–3 (partly cloudy to overcast)
-  - **Drizzle** → 51–57 (light to dense drizzle)
-  - **Rainy** → 61–67, 80–82 (rain showers, light to heavy)
-  - **Snow** → 71–77, 85–86 (snowfall, snow showers)
+| **Filter**             | **Input Type**          | **Allowed Range/Options**                                                                                                                                                                                                                     |
+| ---------------------- | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Temperature Range (°C) | Numeric range (min/max) | -20°C to 50°C                                                                                                                                                                                                                                 |
+| Humidity Range (%)     | Numeric range (min/max) | 0% to 100%                                                                                                                                                                                                                                    |
+| Weather Condition      | Dropdown (grouped)      | - **Clear:** 0 (clear sky)<br>- **Cloudy:** 1–3 (partly cloudy to overcast)<br>- **Drizzle:** 51–57 (light to dense drizzle)<br>- **Rainy:** 61–67, 80–82 (rain showers, light to heavy)<br>- **Snow:** 71–77, 85–86 (snowfall, snow showers) |
+
+> **Note:** The numbers listed under "Weather Condition" refer to weather codes as defined by [WMO](https://codes.wmo.int/common/weather-code) (World Meteorological Organization). Adjust these codes if your data source uses a different standard.
 
 ## Approach
 
@@ -73,18 +72,22 @@ If you feel that you can enhance this project with any additional filters, bette
 
 ## Deliverables
 
-1. Working app with the required changes as per the assignment.
+1. A working app with the required changes as per the assignment.
 
 2. README.md with setup/run instructions. Include .env.example and a seed step (if any) if you've changed db schema.
 
-3. AI_USAGE.md that lists where you used AI/coding assistants, prompts you asked for substantive code, and how you verified/modified results. AI use is not discouraged, we want to understand how you structure your prompts.
+3. AI_USAGE.md that lists where you used AI/coding assistants, prompts you asked for substantive code, and how you verified/modified results. AI use is not discouraged, but we want to understand how you structure your prompts.
 
-4. A 5–10 minute video walkthrough showing the feature working and explaining your approach, a couple of decisions, and at least one place where you changed direction after discovery.
+4. A 5-10 min video walkthrough via Loom showing the working feature and explaining your approach, a couple of decisions, and at least one scenario where you discovered some critical foresight and changed your approach.
 
 ## Submission
 
-You will have a 48 hour window from when you start.
+- You have **48 hours** from the time you receive the assignment email to complete and submit your solution.
 
-Once you've cloned and made all the required changes in the project, push it on a public repository and share the link.
+- After making all required changes, **push your code to a public repository**.
+
+- **Share the public repo link** and all deliverables by replying to the assignment email, and **CC hiring@wardenera.com**.
+
+- Use the subject line: `Weather to Stay or Not | Warden Assignment by {your_name}`.
 
 Good luck, have fun.
