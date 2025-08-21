@@ -26,7 +26,7 @@ After a 6 hour meeting, following filters and constraints were finalized.
 | Humidity Range (%)     | Numeric range (min/max) | 0% to 100%                                                                                                                                                                                                                                    |
 | Weather Condition      | Dropdown (grouped)      | - **Clear:** 0 (clear sky)<br>- **Cloudy:** 1–3 (partly cloudy to overcast)<br>- **Drizzle:** 51–57 (light to dense drizzle)<br>- **Rainy:** 61–67, 80–82 (rain showers, light to heavy)<br>- **Snow:** 71–77, 85–86 (snowfall, snow showers) |
 
-> **Note:** The numbers listed under "Weather Condition" refer to weather codes as defined by [WMO](https://codes.wmo.int/common/weather-code) (World Meteorological Organization). Adjust these codes if your data source uses a different standard.
+> **Note:** The numbers listed under "Weather Condition" refer to weather codes as defined by [WMO](https://codes.wmo.int/common/weather-code) (World Meteorological Organization)
 
 ## Approach
 
