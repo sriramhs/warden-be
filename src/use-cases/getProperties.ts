@@ -1,39 +1,36 @@
 import { Request, Response } from "express";
 import { prisma } from "../database/prisma";
 import { Prisma } from "@prisma/client";
+import keyFor, { cacheGet, cacheSet } from "../utils/cacheUtils";
+import { WeatherSnapshot } from "../types/weatherSnapshot";
+import { clamp } from "../utils/mathUtils";
+import { WEATHER_CONCURRENCY } from "../constants/constants";
+import { getWeatherFilteredResults } from "../services/getWeatherFilteredData";
+import { buildPropertyWhere } from "../utils/dbUtils";
 
-export function buildPropertyWhere(
-  req: Request
-): Prisma.PropertyWhereInput | undefined {
-  const { searchText } = req.query;
 
-  if (typeof searchText !== "string") {
-    return undefined;
-  }
 
-  if (!searchText || searchText.trim().length === 0) {
-    return undefined;
-  }
 
-  const query = searchText.trim();
 
-  return {
-    OR: [
-      { name: { contains: query } },
-      { city: { contains: query } },
-      { state: { contains: query } },
-    ],
-  };
-}
+// simple in-memory cache. For production swap with Redis.
+const weatherCache = new Map<string, { data: WeatherSnapshot; expiresAt: number }>();
+
+
+
+
+
+
 
 export const getProperties = async (req: Request, res: Response) => {
   try {
-    const properties = await prisma.property.findMany({
+    const searchFilteredResults = await prisma.property.findMany({
       take: 20,
       where: buildPropertyWhere(req),
     });
 
-    return res.json(properties);
+    const weatherFilteredResults = await getWeatherFilteredResults(req,searchFilteredResults,weatherCache)
+    console.log(weatherFilteredResults,"dsfdsfsd")
+    return res.json(weatherFilteredResults);
   } catch (error) {
     console.error("Error fetching properties:", error);
     return res.status(500).json({ error: "Internal Server Error" });
