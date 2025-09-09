@@ -88,6 +88,8 @@ export function filterWeather({
 
     return true;
   });
+
+  return combined
 }
 
 export function combineResults(searchFilteredResults:any,weatherSnapshots:any){
